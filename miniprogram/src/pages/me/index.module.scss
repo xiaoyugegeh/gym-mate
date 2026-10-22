@@ -1,0 +1,178 @@
+@use '@/styles/variables.scss' as *;
+
+.secTitle {
+  display: block;
+  font-size: 30rpx;
+  font-weight: 600;
+  color: var(--txt-1);
+  margin-bottom: 8rpx;
+}
+
+/* 行 */
+.meRow {
+  display: flex;
+  align-items: center;
+  padding: 24rpx 0;
+  border-bottom: 1rpx solid var(--divider);
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:active {
+    opacity: 0.85;
+  }
+}
+
+.meIcon {
+  font-size: 40rpx;
+  width: 64rpx;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.meMid {
+  flex: 1;
+  min-width: 0;
+  margin-left: 20rpx;
+}
+
+.meName {
+  display: block;
+  font-size: $font-size-md;
+  color: var(--txt-1);
+  font-weight: 500;
+}
+
+.meMeta {
+  display: block;
+  font-size: $font-size-xs;
+  color: var(--txt-3);
+  margin-top: 4rpx;
+}
+
+.meArr {
+  color: var(--txt-3);
+  font-size: 30rpx;
+  margin-left: 12rpx;
+}
+
+.moreFavs {
+  display: block;
+  text-align: center;
+  font-size: $font-size-xs;
+  color: var(--txt-3);
+  padding: 12rpx 0 0;
+}
+
+/* 开关 */
+.switch {
+  width: 92rpx;
+  height: 52rpx;
+  border-radius: $radius-round;
+  background: var(--bg-hover);
+  padding: 4rpx;
+  box-sizing: border-box;
+  transition: background $transition-base;
+}
+
+.switchDot {
+  width: 44rpx;
+  height: 44rpx;
+  border-radius: $radius-round;
+  background: #ffffff;
+  box-shadow: 0 2rpx 6rpx rgba(0, 0, 0, 0.15);
+  transition: transform $transition-base;
+}
+
+.switchOn {
+  background: var(--pri);
+
+  .switchDot {
+    transform: translateX(40rpx);
+  }
+}
+
+/* 关于 */
+.about {
+  font-size: $font-size-sm;
+  color: var(--txt-2);
+  line-height: 1.7;
+}
+
+.aboutBold {
+  font-weight: 600;
+  color: var(--txt-1);
+}
+
+.aboutLine {
+  display: block;
+  margin-top: 4rpx;
+}
+
+.guideBtn {
+  margin-top: 20rpx;
+  height: $button-height-sm;
+  border-radius: $radius-button;
+  border: 2rpx solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:active {
+    opacity: 0.85;
+  }
+}
+
+.guideBtnTxt {
+  font-size: $font-size-sm;
+  color: var(--txt-2);
+}
+
+/* 指南 */
+.guideItem {
+  margin-bottom: 24rpx;
+}
+
+/* 周目标 chips */
+.goalChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+  margin-top: 24rpx;
+}
+
+.goalChip {
+  height: 72rpx;
+  padding: 0 36rpx;
+  border-radius: $radius-button;
+  background: var(--bg-hover);
+  display: flex;
+  align-items: center;
+  font-size: $font-size-md;
+  color: var(--txt-2);
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.goalChipOn {
+  background: var(--pri);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.guideTitle {
+  display: block;
+  font-size: $font-size-md;
+  font-weight: 600;
+  color: var(--txt-1);
+  margin-bottom: 8rpx;
+}
+
+.guideDesc {
+  font-size: $font-size-sm;
+  color: var(--txt-2);
+  line-height: 1.7;
+}

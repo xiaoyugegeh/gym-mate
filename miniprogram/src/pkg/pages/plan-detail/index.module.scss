@@ -1,0 +1,243 @@
+@use '@/styles/variables.scss' as *;
+
+.desc {
+  font-size: $font-size-sm;
+  color: var(--txt-2);
+  line-height: 1.6;
+}
+
+/* 动作条目 */
+.item {
+  display: flex;
+  align-items: center;
+  padding: 16rpx 0;
+  border-bottom: 1rpx solid var(--divider);
+}
+
+.itemImg {
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: $radius-md;
+  background: var(--bg-hover);
+  flex-shrink: 0;
+}
+
+.itemInfo {
+  flex: 1;
+  min-width: 0;
+  margin-left: 20rpx;
+}
+
+.itemName {
+  display: block;
+  font-size: $font-size-md;
+  font-weight: 600;
+  color: var(--txt-1);
+  @include text-ellipsis;
+}
+
+.itemMeta {
+  display: block;
+  font-size: $font-size-xs;
+  color: var(--txt-3);
+  margin-top: 6rpx;
+}
+
+.opBtn {
+  flex-shrink: 0;
+  width: 56rpx;
+  height: 56rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $radius-sm;
+  background: var(--bg-hover);
+  color: var(--txt-3);
+  font-size: 26rpx;
+  margin-left: 12rpx;
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.addBtn {
+  margin-top: 20rpx;
+  height: $button-height-sm;
+  border-radius: $radius-button;
+  border: 2rpx dashed var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.addTxt {
+  font-size: $font-size-sm;
+  color: var(--txt-2);
+}
+
+/* 开始按钮 */
+.startBtn {
+  height: $button-height-md;
+  border-radius: $radius-button;
+  background: var(--pri-grad);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all $transition-fast;
+
+  &:active {
+    opacity: 0.9;
+    transform: scale(0.98);
+  }
+}
+
+.startTxt {
+  color: #ffffff;
+  font-size: $font-size-md;
+  font-weight: 600;
+}
+
+/* 次按钮 */
+.subBtn {
+  margin-top: 20rpx;
+  height: $button-height-md;
+  border-radius: $radius-button;
+  border: 2rpx solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-card);
+
+  &:active {
+    opacity: 0.85;
+  }
+}
+
+.subTxt {
+  font-size: $font-size-md;
+  color: var(--txt-2);
+}
+
+.subBtnDanger {
+  margin-top: 20rpx;
+  height: $button-height-md;
+  border-radius: $radius-button;
+  background: var(--tag-r-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:active {
+    opacity: 0.85;
+  }
+}
+
+.subTxtDanger {
+  font-size: $font-size-md;
+  color: var(--tag-r-txt);
+}
+
+/* 编辑表单 */
+.formRow3 {
+  display: flex;
+  gap: 16rpx;
+}
+
+/* 每周排期 */
+.cardTitle {
+  display: block;
+  font-size: 30rpx;
+  font-weight: 600;
+  color: var(--txt-1);
+  margin-bottom: 16rpx;
+}
+
+.schedHint {
+  display: block;
+  font-size: $font-size-xs;
+  color: var(--txt-3);
+  margin-bottom: 20rpx;
+}
+
+.weekRow {
+  display: flex;
+  gap: 12rpx;
+}
+
+.weekCell {
+  flex: 1;
+  height: 68rpx;
+  border-radius: $radius-md;
+  background: var(--bg-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-size-sm;
+  color: var(--txt-2);
+
+  &:active {
+    transform: scale(0.94);
+  }
+}
+
+.weekOn {
+  background: var(--pri);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.formCol {
+  flex: 1;
+}
+
+.formLabel {
+  display: block;
+  font-size: $font-size-xs;
+  color: var(--txt-3);
+  margin-bottom: 10rpx;
+}
+
+.formInput {
+  height: 76rpx;
+  background: var(--bg-hover);
+  border-radius: $radius-md;
+  padding: 0 18rpx;
+  font-size: $font-size-md;
+  color: var(--txt-1);
+  text-align: center;
+}
+
+.nameInput {
+  height: 84rpx;
+  background: var(--bg-hover);
+  border-radius: $radius-md;
+  padding: 0 24rpx;
+  font-size: $font-size-md;
+  color: var(--txt-1);
+}
+
+.modalBtn {
+  margin-top: 24rpx;
+  height: $button-height-md;
+  border-radius: $radius-button;
+  background: var(--pri-grad);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:active {
+    opacity: 0.9;
+    transform: scale(0.98);
+  }
+}
+
+.modalBtnTxt {
+  color: #ffffff;
+  font-size: $font-size-md;
+  font-weight: 600;
+}

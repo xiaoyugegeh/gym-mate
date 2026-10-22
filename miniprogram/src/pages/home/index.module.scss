@@ -1,0 +1,270 @@
+@use '@/styles/variables.scss' as *;
+
+/* 顶部统计 */
+.hero {
+  background: var(--hero-grad);
+  border-radius: $radius-xl;
+  padding: 40rpx 32rpx 36rpx;
+  margin-bottom: 24rpx;
+  color: #ffffff;
+  box-shadow: 0 6rpx 20rpx rgba(255, 87, 34, 0.28);
+}
+
+.heroTitle {
+  display: block;
+  font-size: 40rpx;
+  font-weight: 600;
+}
+
+.heroSub {
+  display: block;
+  font-size: $font-size-sm;
+  opacity: 0.85;
+  margin-top: 8rpx;
+}
+
+.heroStats {
+  display: flex;
+  margin-top: 32rpx;
+}
+
+.hs {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hsNum {
+  font-size: 44rpx;
+  font-weight: 700;
+}
+
+.hsLabel {
+  font-size: $font-size-xs;
+  opacity: 0.85;
+  margin-top: 4rpx;
+}
+
+/* 卡片头 */
+.cardHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8rpx;
+}
+
+.cardTitle {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: var(--txt-1);
+}
+
+.cardMore {
+  font-size: $font-size-xs;
+  color: var(--txt-3);
+}
+
+/* 周目标进度 */
+.goalBox {
+  margin-top: 24rpx;
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: $radius-md;
+  padding: 16rpx 20rpx;
+}
+
+.goalTxt {
+  font-size: 22rpx;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.goalTrack {
+  margin-top: 12rpx;
+  height: 14rpx;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: $radius-round;
+  overflow: hidden;
+}
+
+.goalFill {
+  height: 100%;
+  background: #ffffff;
+  border-radius: $radius-round;
+}
+
+.goalFillDone {
+  background: #ffd666;
+}
+
+/* 今日排期 */
+.schedName {
+  display: block;
+  font-size: 34rpx;
+  font-weight: 700;
+  color: var(--txt-1);
+}
+
+.schedMeta {
+  display: block;
+  font-size: $font-size-sm;
+  color: var(--txt-3);
+  margin-top: 8rpx;
+}
+
+/* 今日推荐 */
+.todayCard {
+  display: flex;
+  align-items: center;
+  padding: 16rpx 0;
+  border-bottom: 1rpx solid var(--divider);
+
+  &:active {
+    opacity: 0.85;
+  }
+}
+
+.todayImg {
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: $radius-md;
+  background: var(--bg-hover);
+  flex-shrink: 0;
+}
+
+.todayInfo {
+  flex: 1;
+  min-width: 0;
+  margin-left: 20rpx;
+}
+
+.todayName {
+  display: block;
+  font-size: $font-size-md;
+  font-weight: 600;
+  color: var(--txt-1);
+  @include text-ellipsis;
+}
+
+.todayMeta {
+  display: block;
+  font-size: $font-size-sm;
+  color: var(--txt-3);
+  margin-top: 6rpx;
+  @include text-ellipsis;
+}
+
+.todayArr {
+  color: var(--txt-3);
+  font-size: 32rpx;
+  margin-left: 12rpx;
+}
+
+/* 主按钮 */
+.primaryBtn {
+  margin-top: 24rpx;
+  height: $button-height-md;
+  border-radius: $radius-button;
+  background: var(--pri-grad);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all $transition-fast;
+
+  &:active {
+    opacity: 0.9;
+    transform: scale(0.98);
+  }
+}
+
+.primaryBtnTxt {
+  color: #ffffff;
+  font-size: $font-size-md;
+  font-weight: 600;
+}
+
+/* 部位网格 */
+.partGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20rpx;
+}
+
+.partCell {
+  width: calc((100% - 80rpx) / 5);
+  background: var(--bg-card);
+  border-radius: $radius-lg;
+  padding: 24rpx 0 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: $shadow-card;
+  transition: all $transition-fast;
+
+  &:active {
+    opacity: 0.9;
+    transform: scale(0.96);
+  }
+}
+
+.partIcon {
+  font-size: 44rpx;
+}
+
+.partName {
+  font-size: $font-size-xs;
+  color: var(--txt-2);
+  margin-top: 10rpx;
+}
+
+/* 快捷入口 */
+.quickGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20rpx;
+}
+
+.quickCell {
+  width: calc((100% - 60rpx) / 4);
+  background: var(--bg-card);
+  border-radius: $radius-lg;
+  padding: 24rpx 0 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: $shadow-card;
+  transition: all $transition-fast;
+
+  &:active {
+    opacity: 0.9;
+    transform: scale(0.96);
+  }
+}
+
+/* 安全红线 */
+.tips {
+  margin-top: 12rpx;
+}
+
+.tip {
+  display: flex;
+  align-items: flex-start;
+  gap: 12rpx;
+  padding: 12rpx 16rpx;
+  border-radius: $radius-sm;
+  font-size: $font-size-sm;
+  margin-bottom: 10rpx;
+}
+
+.good {
+  background: var(--good-bg);
+}
+
+.bad {
+  background: var(--bad-bg);
+}
+
+.tipTxt {
+  flex: 1;
+  color: var(--txt-2);
+  line-height: 1.5;
+}

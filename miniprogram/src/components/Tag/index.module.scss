@@ -1,0 +1,36 @@
+@use '@/styles/variables.scss' as *;
+
+.tag {
+  display: inline-block;
+  padding: 4rpx 14rpx;
+  border-radius: $radius-xs;
+  font-size: $font-size-xs;
+  line-height: 1.4;
+  white-space: nowrap;
+  margin-right: 8rpx;
+}
+
+.p {
+  background: var(--tag-p-bg);
+  color: var(--tag-p-txt);
+}
+
+.g {
+  background: var(--tag-g-bg);
+  color: var(--tag-g-txt);
+}
+
+.o {
+  background: var(--tag-o-bg);
+  color: var(--tag-o-txt);
+}
+
+.r {
+  background: var(--tag-r-bg);
+  color: var(--tag-r-txt);
+}
+
+.b {
+  background: var(--tag-b-bg);
+  color: var(--tag-b-txt);
+}

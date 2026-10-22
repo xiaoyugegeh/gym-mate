@@ -1,0 +1,79 @@
+@use '@/styles/variables.scss' as *;
+
+.card {
+  display: flex;
+  align-items: center;
+  background: var(--bg-card);
+  border-radius: $radius-lg;
+  padding: 24rpx;
+  margin-bottom: 20rpx;
+  box-shadow: $shadow-card;
+  transition: all $transition-fast;
+
+  &:active {
+    opacity: 0.9;
+    transform: scale(0.985);
+  }
+}
+
+.img,
+.imgFallback {
+  width: 152rpx;
+  height: 152rpx;
+  border-radius: $radius-md;
+  flex-shrink: 0;
+  background: var(--bg-hover);
+}
+
+.imgFallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 64rpx;
+}
+
+.info {
+  flex: 1;
+  min-width: 0;
+  margin-left: 24rpx;
+}
+
+.name {
+  display: block;
+  font-size: $font-size-md;
+  font-weight: 600;
+  color: var(--txt-1);
+  @include text-ellipsis;
+}
+
+.meta {
+  display: block;
+  font-size: $font-size-sm;
+  color: var(--txt-3);
+  margin: 8rpx 0 12rpx;
+  @include text-ellipsis;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.favBtn {
+  flex-shrink: 0;
+  width: 72rpx;
+  height: 72rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 44rpx;
+  color: var(--txt-disabled);
+
+  &.favOn {
+    color: #ffb400;
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}

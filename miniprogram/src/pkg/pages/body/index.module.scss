@@ -1,0 +1,202 @@
+@use '@/styles/variables.scss' as *;
+
+.cardTitle {
+  display: block;
+  font-size: 30rpx;
+  font-weight: 600;
+  color: var(--txt-1);
+  margin-bottom: 20rpx;
+}
+
+.cardSub {
+  display: block;
+  font-size: $font-size-xs;
+  color: var(--txt-3);
+  margin-top: 16rpx;
+  line-height: 1.5;
+}
+
+/* 记录表单 */
+.formRow {
+  display: flex;
+  gap: 16rpx;
+}
+
+.formCol {
+  flex: 1;
+}
+
+.formLabel {
+  display: block;
+  font-size: $font-size-xs;
+  color: var(--txt-3);
+  margin-bottom: 10rpx;
+}
+
+.formInput {
+  height: 76rpx;
+  background: var(--bg-hover);
+  border-radius: $radius-md;
+  padding: 0 20rpx;
+  font-size: $font-size-md;
+  color: var(--txt-1);
+}
+
+.primaryBtn {
+  margin-top: 24rpx;
+  height: $button-height-md;
+  border-radius: $radius-button;
+  background: var(--pri-grad);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:active {
+    opacity: 0.9;
+    transform: scale(0.98);
+  }
+}
+
+.primaryBtnTxt {
+  color: #ffffff;
+  font-size: $font-size-md;
+  font-weight: 600;
+}
+
+/* 指标网格 */
+.metricGrid {
+  display: flex;
+  gap: 16rpx;
+}
+
+.metric {
+  flex: 1;
+  background: var(--bg-hover);
+  border-radius: $radius-md;
+  padding: 24rpx 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mNum {
+  font-size: $font-size-xxl;
+  font-weight: 700;
+  color: var(--pri);
+}
+
+.mLabel {
+  font-size: $font-size-xs;
+  color: var(--txt-3);
+  margin-top: 8rpx;
+}
+
+.mUnit {
+  font-size: 20rpx;
+  color: var(--txt-3);
+  margin-left: 4rpx;
+  font-weight: 400;
+}
+
+/* 身体信息表单 */
+.sexRow {
+  display: flex;
+  gap: 16rpx;
+  margin-bottom: 20rpx;
+}
+
+.sexBtn {
+  flex: 1;
+  height: 72rpx;
+  border-radius: $radius-md;
+  background: var(--bg-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-size-md;
+  color: var(--txt-2);
+}
+
+.sexOn {
+  background: var(--pri-soft);
+  color: var(--pri);
+  font-weight: 600;
+}
+
+/* 趋势图 */
+.trendChart {
+  display: flex;
+  align-items: flex-end;
+  gap: 10rpx;
+  margin-top: 8rpx;
+}
+
+.tCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tVal {
+  font-size: 20rpx;
+  color: var(--txt-3);
+  margin-bottom: 8rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+}
+
+.tTrack {
+  width: 100%;
+  height: 200rpx;
+  background: var(--bg-hover);
+  border-radius: $radius-sm;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.tBar {
+  width: 100%;
+  background: var(--pri-grad);
+  border-radius: $radius-sm $radius-sm 0 0;
+  opacity: 0.75;
+}
+
+.tLabel {
+  font-size: 20rpx;
+  color: var(--txt-3);
+  margin-top: 10rpx;
+  @include text-ellipsis;
+  max-width: 100%;
+}
+
+/* 历史列表 */
+.logRow {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid var(--divider);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.logDate {
+  flex: 1;
+  font-size: $font-size-md;
+  color: var(--txt-1);
+}
+
+.logVal {
+  font-size: $font-size-md;
+  font-weight: 600;
+  color: var(--pri);
+}
+
+.logFat {
+  font-size: $font-size-sm;
+  color: var(--txt-3);
+  margin-left: 16rpx;
+}

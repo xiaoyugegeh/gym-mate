@@ -1,0 +1,308 @@
+@use '@/styles/variables.scss' as *;
+
+.cardTitle {
+  display: block;
+  font-size: 30rpx;
+  font-weight: 600;
+  color: var(--txt-1);
+}
+
+.cardSub {
+  display: block;
+  font-size: $font-size-xs;
+  color: var(--txt-3);
+  margin: 8rpx 0 20rpx;
+}
+
+/* 快捷时长 */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+}
+
+.chip {
+  height: 72rpx;
+  padding: 0 34rpx;
+  display: flex;
+  align-items: center;
+  background: var(--bg-hover);
+  border-radius: $radius-button;
+  font-size: $font-size-md;
+  color: var(--txt-2);
+  transition: all $transition-fast;
+
+  &:active {
+    transform: scale(0.95);
+    background: var(--pri-soft);
+    color: var(--pri);
+  }
+}
+
+/* 计时器 */
+.timerBox {
+  margin-top: 28rpx;
+  background: var(--pri-soft);
+  border-radius: $radius-lg;
+  padding: 36rpx 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timerNum {
+  font-size: 108rpx;
+  font-weight: 700;
+  color: var(--pri);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+
+.restNum {
+  color: var(--color-success, #00b42a);
+}
+
+.timerBtns {
+  display: flex;
+  gap: 20rpx;
+  margin-top: 28rpx;
+}
+
+.okBtn {
+  height: $button-height-sm;
+  padding: 0 40rpx;
+  border-radius: $radius-button;
+  background: var(--pri-grad);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:active {
+    opacity: 0.9;
+    transform: scale(0.97);
+  }
+}
+
+.okTxt {
+  color: #ffffff;
+  font-size: $font-size-sm;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.quitBtn {
+  height: $button-height-sm;
+  padding: 0 40rpx;
+  border-radius: $radius-button;
+  border: 2rpx solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-card);
+
+  &:active {
+    opacity: 0.85;
+  }
+}
+
+.quitTxt {
+  color: var(--txt-2);
+  font-size: $font-size-sm;
+  white-space: nowrap;
+}
+
+/* HIIT */
+.hiitPhase {
+  font-size: $font-size-lg;
+  font-weight: 600;
+  color: var(--txt-1);
+  margin-bottom: 8rpx;
+}
+
+.hiitRound {
+  font-size: $font-size-sm;
+  color: var(--txt-3);
+  margin-top: 8rpx;
+}
+
+/* 表单 */
+.formRow3 {
+  display: flex;
+  gap: 16rpx;
+  margin-top: 20rpx;
+}
+
+.formCol {
+  flex: 1;
+}
+
+.formLabel {
+  display: block;
+  font-size: $font-size-xs;
+  color: var(--txt-3);
+  margin-bottom: 10rpx;
+}
+
+.formInput {
+  height: 76rpx;
+  background: var(--bg-hover);
+  border-radius: $radius-md;
+  padding: 0 12rpx;
+  font-size: $font-size-md;
+  color: var(--txt-1);
+  text-align: center;
+}
+
+.startBtn {
+  margin-top: 28rpx;
+  height: $button-height-md;
+  border-radius: $radius-button;
+  background: var(--pri-grad);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:active {
+    opacity: 0.9;
+    transform: scale(0.98);
+  }
+}
+
+.startTxt {
+  color: #ffffff;
+  font-size: $font-size-md;
+  font-weight: 600;
+}
+
+/* 1RM 计算器 */
+.formRow3 {
+  display: flex;
+  gap: 16rpx;
+}
+
+.rmBox {
+  margin-top: 24rpx;
+  background: var(--pri-soft);
+  border-radius: $radius-lg;
+  padding: 28rpx 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rmNum {
+  font-size: 72rpx;
+  font-weight: 700;
+  color: var(--pri);
+  line-height: 1.1;
+}
+
+.rmLabel {
+  font-size: $font-size-xs;
+  color: var(--txt-3);
+  margin-top: 8rpx;
+}
+
+.pctRow {
+  display: flex;
+  align-items: center;
+  padding: 14rpx 8rpx;
+  border-bottom: 1rpx solid var(--divider);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.pctPct {
+  width: 100rpx;
+  font-size: $font-size-sm;
+  color: var(--txt-3);
+}
+
+.pctKg {
+  flex: 1;
+  font-size: $font-size-md;
+  font-weight: 600;
+  color: var(--pri);
+}
+
+.pctReps {
+  font-size: $font-size-sm;
+  color: var(--txt-2);
+}
+
+/* 配重计算 */
+.plateInput {
+  height: 76rpx;
+  background: var(--bg-hover);
+  border-radius: $radius-md;
+  padding: 0 24rpx;
+  font-size: $font-size-md;
+  color: var(--txt-1);
+}
+
+.plateResult {
+  margin-top: 20rpx;
+  background: var(--pri-soft);
+  border-radius: $radius-lg;
+  padding: 24rpx;
+}
+
+.plateMsg {
+  font-size: $font-size-sm;
+  color: var(--txt-2);
+}
+
+.plateSide {
+  display: block;
+  font-size: $font-size-md;
+  font-weight: 600;
+  color: var(--txt-1);
+  margin-top: 12rpx;
+}
+
+.plateChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+  margin-top: 14rpx;
+}
+
+.plateChip {
+  background: var(--pri);
+  border-radius: $radius-round;
+  padding: 8rpx 24rpx;
+}
+
+.plateChipTxt {
+  color: #ffffff;
+  font-size: $font-size-sm;
+  font-weight: 600;
+}
+
+/* kg/lb 换算 */
+.convRow {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+}
+
+.convCol {
+  flex: 1;
+}
+
+.convEq {
+  font-size: $font-size-xl;
+  color: var(--txt-3);
+  font-weight: 600;
+  padding-top: 30rpx;
+}
+
+.convTip {
+  display: block;
+  margin-top: 20rpx;
+  font-size: $font-size-sm;
+  color: var(--pri);
+  font-weight: 600;
+}

@@ -1,0 +1,133 @@
+@use '@/styles/variables.scss' as *;
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  background: var(--bg-card);
+  border-radius: $radius-button;
+  height: 76rpx;
+  padding: 0 28rpx;
+  margin-bottom: 20rpx;
+  box-shadow: $shadow-card;
+}
+
+.searchIcon {
+  font-size: 34rpx;
+  color: var(--txt-3);
+  margin-right: 14rpx;
+}
+
+.searchInput {
+  flex: 1;
+  font-size: $font-size-md;
+  color: var(--txt-1);
+}
+
+.placeholder {
+  color: var(--txt-disabled);
+}
+
+.listScroll {
+  height: calc(100vh - 240rpx);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  background: var(--bg-card);
+  border-radius: $radius-lg;
+  padding: 20rpx 24rpx;
+  margin-bottom: 16rpx;
+  box-shadow: $shadow-card;
+  transition: all $transition-fast;
+
+  &:active {
+    transform: scale(0.985);
+  }
+}
+
+.rowOn {
+  border: 2rpx solid var(--pri);
+}
+
+.img {
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: $radius-md;
+  background: var(--bg-hover);
+  flex-shrink: 0;
+}
+
+.info {
+  flex: 1;
+  min-width: 0;
+  margin-left: 20rpx;
+}
+
+.name {
+  display: block;
+  font-size: $font-size-md;
+  font-weight: 600;
+  color: var(--txt-1);
+  @include text-ellipsis;
+}
+
+.meta {
+  display: block;
+  font-size: $font-size-xs;
+  color: var(--txt-3);
+  margin-top: 6rpx;
+}
+
+.check {
+  flex-shrink: 0;
+  width: 44rpx;
+  height: 44rpx;
+  border-radius: $radius-round;
+  border: 2rpx solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 26rpx;
+}
+
+.checkOn {
+  background: var(--pri);
+  border-color: var(--pri);
+}
+
+.listBottomSpace {
+  height: 40rpx;
+}
+
+.bottomBar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 16rpx 32rpx calc(env(safe-area-inset-bottom) + 16rpx);
+  background: var(--bg-card);
+  box-shadow: $shadow-float;
+  z-index: 100;
+}
+
+.doneBtn {
+  height: $button-height-lg;
+  border-radius: $radius-button;
+  background: var(--pri-grad);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:active {
+    opacity: 0.9;
+    transform: scale(0.98);
+  }
+}
+
+.doneTxt {
+  color: #ffffff;
+  font-size: $font-size-md;
+  font-weight: 600;
+}

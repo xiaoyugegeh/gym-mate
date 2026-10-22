@@ -1,0 +1,21 @@
+# 依赖与构建产物
+node_modules/
+dist/
+.trae-html-share-packages/
+
+# IDE/工具本地状态
+.pai/
+.auth/
+*.log
+
+# 系统文件
+Thumbs.db
+.DS_Store
+
+# 环境与密钥（防止误传凭证）
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+private.*.key

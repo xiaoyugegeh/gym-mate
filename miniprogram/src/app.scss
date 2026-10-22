@@ -1,0 +1,125 @@
+/* ============================================
+ * 铁馆伴侣 GymMate —— 全局基础样式
+ * 运行时主题变量：浅色默认，.theme-dark 覆盖（深色模式）
+ * ============================================ */
+
+page,
+body {
+  /* 品牌色 */
+  --pri: #ff5722;
+  --pri-light: #ff8a50;
+  --pri-dark: #e64a19;
+  --pri-grad: linear-gradient(135deg, #ff5722 0%, #ff8a50 100%);
+  --pri-soft: #fff0eb;
+
+  /* 背景 */
+  --bg-page: #f5f6f7;
+  --bg-card: #ffffff;
+  --bg-hover: #f2f3f5;
+  --hero-grad: linear-gradient(135deg, #ff5722 0%, #ff8a50 100%);
+
+  /* 文本 */
+  --txt-1: #1d2129;
+  --txt-2: #4e5969;
+  --txt-3: #86909c;
+  --txt-disabled: #c9cdd4;
+
+  /* 边框 */
+  --border: #e5e6eb;
+  --divider: #f2f3f5;
+
+  /* 标签 */
+  --tag-p-bg: #fff0eb;
+  --tag-p-txt: #ff5722;
+  --tag-g-bg: #e8f7ef;
+  --tag-g-txt: #00b42a;
+  --tag-o-bg: #fff3e8;
+  --tag-o-txt: #ff7d00;
+  --tag-r-bg: #ffece8;
+  --tag-r-txt: #f53f3f;
+  --tag-b-bg: #e8f3ff;
+  --tag-b-txt: #165dff;
+
+  /* 对错要点 */
+  --good-bg: #e8f7ef;
+  --bad-bg: #ffece8;
+
+  /* 热力图 */
+  --heat-0: #edeff2;
+  --heat-1: #ffd8c2;
+  --heat-2: #ffab85;
+  --heat-3: #ff7a4d;
+  --heat-4: #ff5722;
+
+  font-size: 28rpx;
+  color: var(--txt-1);
+}
+
+/* 深色模式 */
+.theme-dark {
+  --pri: #ff6d3b;
+  --pri-light: #ff8a50;
+  --pri-dark: #e64a19;
+  --pri-grad: linear-gradient(135deg, #e64a19 0%, #ff7043 100%);
+  --pri-soft: #3a241d;
+
+  --bg-page: #121417;
+  --bg-card: #1e2126;
+  --bg-hover: #26292f;
+  --hero-grad: linear-gradient(135deg, #c94010 0%, #e05a2b 100%);
+
+  --txt-1: #f0f2f5;
+  --txt-2: #b4bac3;
+  --txt-3: #7d828c;
+  --txt-disabled: #4e535c;
+
+  --border: #33373e;
+  --divider: #2a2d33;
+
+  --tag-p-bg: #3a241d;
+  --tag-p-txt: #ff8a65;
+  --tag-g-bg: #16301f;
+  --tag-g-txt: #4cce6e;
+  --tag-o-bg: #382a14;
+  --tag-o-txt: #ffb65c;
+  --tag-r-bg: #3a1a17;
+  --tag-r-txt: #ff7875;
+  --tag-b-bg: #17253d;
+  --tag-b-txt: #6aa9ff;
+
+  --good-bg: #16301f;
+  --bad-bg: #3a1a17;
+
+  --heat-0: #26292f;
+}
+
+/* 页面根容器：全屏背景 + 安全区内边距 */
+.page-root {
+  min-height: 100vh;
+  background: var(--bg-page);
+  box-sizing: border-box;
+  padding: 24rpx 32rpx calc(env(safe-area-inset-bottom) + 48rpx);
+  color: var(--txt-1);
+}
+
+/* 全屏页根容器（无内边距） */
+.page-flush {
+  padding: 0 0 env(safe-area-inset-bottom);
+}
+
+/* 通用卡片 */
+.g-card {
+  background: var(--bg-card);
+  border-radius: 16rpx;
+  padding: 32rpx;
+  margin-bottom: 24rpx;
+  box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.06);
+}
+
+/* 区块标题 */
+.g-sec-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: var(--txt-1);
+  margin: 32rpx 4rpx 20rpx;
+}

@@ -1,0 +1,114 @@
+@use '@/styles/variables.scss' as *;
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  background: var(--bg-card);
+  border-radius: $radius-button;
+  height: 76rpx;
+  padding: 0 28rpx;
+  margin-bottom: 20rpx;
+  box-shadow: $shadow-card;
+}
+
+.searchIcon {
+  font-size: 34rpx;
+  color: var(--txt-3);
+  margin-right: 14rpx;
+}
+
+.searchInput {
+  flex: 1;
+  font-size: $font-size-md;
+  color: var(--txt-1);
+}
+
+.placeholder {
+  color: var(--txt-disabled);
+}
+
+/* 部位横向滚动 chips */
+.chipsScroll {
+  white-space: nowrap;
+  margin-bottom: 20rpx;
+}
+
+.chipsInner {
+  display: inline-flex;
+  gap: 16rpx;
+  padding: 4rpx 2rpx;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 60rpx;
+  padding: 0 28rpx;
+  border-radius: $radius-button;
+  background: var(--bg-card);
+  color: var(--txt-2);
+  font-size: $font-size-sm;
+  box-shadow: $shadow-card;
+  transition: all $transition-fast;
+  white-space: nowrap;
+
+  &:active {
+    transform: scale(0.96);
+  }
+}
+
+.chipOn {
+  background: var(--pri-grad);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* 筛选行 */
+.filterRow {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+  margin-bottom: 24rpx;
+}
+
+.pickerBtn {
+  display: flex;
+  align-items: center;
+  height: 60rpx;
+  padding: 0 24rpx;
+  border-radius: $radius-button;
+  background: var(--bg-card);
+  box-shadow: $shadow-card;
+}
+
+.pickerTxt {
+  font-size: $font-size-sm;
+  color: var(--txt-2);
+}
+
+.pickerOn {
+  font-size: $font-size-sm;
+  color: var(--pri);
+  font-weight: 600;
+}
+
+.pickerArr {
+  font-size: 20rpx;
+  color: var(--txt-3);
+  margin-left: 8rpx;
+}
+
+.count {
+  margin-left: auto;
+  font-size: $font-size-xs;
+  color: var(--txt-3);
+}
+
+.moreTip {
+  display: block;
+  text-align: center;
+  font-size: $font-size-xs;
+  color: var(--txt-3);
+  padding: 16rpx 0 8rpx;
+}

@@ -1,0 +1,37 @@
+@use '@/styles/variables.scss' as *;
+
+.heat {
+  display: flex;
+  gap: 6rpx;
+  overflow: hidden;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 6rpx;
+  flex: 1;
+}
+
+.cell {
+  width: 100%;
+  padding-top: 100%;
+  border-radius: 4rpx;
+  background: var(--heat-0);
+}
+
+.l1 {
+  background: var(--heat-1);
+}
+
+.l2 {
+  background: var(--heat-2);
+}
+
+.l3 {
+  background: var(--heat-3);
+}
+
+.l4 {
+  background: var(--heat-4);
+}

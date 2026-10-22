@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#ff5722">
+<title>铁馆伴侣 · GymMate</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>💪</text></svg>">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+  <!-- 顶部栏 -->
+  <header id="topbar">
+    <button id="btn-back" class="icon-btn hidden" aria-label="返回">‹</button>
+    <div id="topbar-title">铁馆伴侣</div>
+    <button id="btn-search-jump" class="icon-btn" aria-label="搜索">⌕</button>
+  </header>
+
+  <!-- 主视图 -->
+  <main id="view"></main>
+
+  <!-- 底部导航 -->
+  <nav id="tabbar">
+    <a href="#/home" data-tab="home"><span class="t-ico">🏠</span><span class="t-txt">首页</span></a>
+    <a href="#/library" data-tab="library"><span class="t-ico">📖</span><span class="t-txt">动作库</span></a>
+    <a href="#/plans" data-tab="plans"><span class="t-ico">📋</span><span class="t-txt">计划</span></a>
+    <a href="#/log" data-tab="log"><span class="t-ico">📅</span><span class="t-txt">记录</span></a>
+    <a href="#/me" data-tab="me"><span class="t-ico">👤</span><span class="t-txt">我的</span></a>
+  </nav>
+</div>
+
+<!-- 跟练全屏层 -->
+<div id="workout-layer" class="hidden"></div>
+<!-- 计时器全屏层 -->
+<div id="timer-layer" class="hidden"></div>
+<!-- 通用弹窗 -->
+<div id="modal-layer" class="hidden"></div>
+<!-- 提示 -->
+<div id="toast" class="hidden"></div>
+
+<script src="js/data.js"></script>
+<script src="js/curated.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

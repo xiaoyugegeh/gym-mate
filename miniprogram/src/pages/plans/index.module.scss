@@ -1,0 +1,120 @@
+@use '@/styles/variables.scss' as *;
+
+.newBtn {
+  height: $button-height-md;
+  border-radius: $radius-button;
+  background: var(--pri-grad);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8rpx;
+  transition: all $transition-fast;
+
+  &:active {
+    opacity: 0.9;
+    transform: scale(0.98);
+  }
+}
+
+.newBtnTxt {
+  color: #ffffff;
+  font-size: $font-size-md;
+  font-weight: 600;
+}
+
+.planHead {
+  display: flex;
+  align-items: center;
+}
+
+.planIcon {
+  font-size: 52rpx;
+  margin-right: 20rpx;
+}
+
+.planInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.planName {
+  display: block;
+  font-size: $font-size-lg;
+  font-weight: 600;
+  color: var(--txt-1);
+  @include text-ellipsis;
+}
+
+.planMeta {
+  display: block;
+  font-size: $font-size-sm;
+  color: var(--txt-3);
+  margin-top: 6rpx;
+  @include text-ellipsis;
+}
+
+.templateMeta {
+  display: block;
+  font-size: $font-size-sm;
+  color: var(--txt-2);
+  margin: 16rpx 0 20rpx;
+}
+
+.planBtns {
+  display: flex;
+  gap: 16rpx;
+  margin-top: 20rpx;
+}
+
+.ghostBtn {
+  flex: 1;
+  height: $button-height-md;
+  border-radius: $radius-button;
+  border: 2rpx solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all $transition-fast;
+
+  &:active {
+    transform: scale(0.97);
+    opacity: 0.9;
+  }
+}
+
+.ghostTxt {
+  font-size: $font-size-sm;
+  color: var(--txt-2);
+}
+
+.goBtn {
+  flex: 2;
+  height: $button-height-md;
+  border-radius: $radius-button;
+  background: var(--pri-grad);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all $transition-fast;
+
+  &:active {
+    opacity: 0.9;
+    transform: scale(0.98);
+  }
+}
+
+.goTxt {
+  color: #ffffff;
+  font-size: $font-size-sm;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.nameInput {
+  height: 84rpx;
+  background: var(--bg-hover);
+  border-radius: $radius-md;
+  padding: 0 24rpx;
+  font-size: $font-size-md;
+  color: var(--txt-1);
+}
